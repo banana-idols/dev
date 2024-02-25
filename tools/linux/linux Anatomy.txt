@@ -1,0 +1,133 @@
+Bootloader
+
+This can is usually either GRUB or systemd-boot. This may not mean much to you, but i’ll explain the difference. GRUB has been around for ages and can be themed while having a ton of flexibility. It supports UEFI and Legacy, while systemd-boot is pretty much included with every modern linux distribution and only boots via UEFI and has a limited menu system. I highly encourage you that want a themed multi-boot system to check out my Top 5 Bootloader project that auto-installs multiple themes: https://christitus.com/bootloader-themes/
+Init System
+
+When your system is initializing on startup it needs to verify all the devices it will use and get the system ready for boot. Almost every Linux system these days use systemd. Systemd is very big and inclusive, but to many is bloated. It does much more than just initializing the system. It has Timers, bootloader, services, and much more. I did a YouTube video explaining everything in systemd if you want to learn more. https://youtu.be/hc7J-zWEty8 There is other options out there for Linux and certain fringe distributions that use them, but if you want other options check out init.d and precursors to systemd. They are much faster and if looking at building an ultimate minimal system this is the route to take.
+Display Render
+
+To draw graphics on the screen we need a render. There are only two major ones you need to know about. Wayland and Xorg. Wayland is the new kid that should be faster and better, but is lacking features and compatibility. Xorg is the old, wise man that just works, but is starting to show its age. To me, I always choose Xorg because Wayland always runs into problems. Xorg has two features that Wayland is lacking for me right now. It has X11 forwarding for running GUI programs remotely through an SSH connection and using legacy programs for sharing a keyboard/mouse across screens using synergy/barrier. I did a video on this here: https://youtu.be/Fci_ALdEzGc. To many it simply doesn’t matter, because they both fundamentally do the same thing.
+Display Manager
+
+This really should be called a Login Manager or user selector, but in Linux the entire ecosystem is run by extremely smart technical people, that just so happen to be terrible at marketing. So the “Display Manager” comes in many flavors and this is where we start to run into many personal options in Distributions. Personally, I really don’t care about this, but there are three main ones that are used and can be configured differently:
+
+    lightdm
+    sddm
+    gdm While there are others, these three pretty much are always chosen for a distribution. SDDM is generally bundled with KDE systems (which we will get into here in a bit), GDM is for GNOME systems, and lightdm (my personal fav) is pretty much a catch all.
+
+Desktop Environments
+
+Think of Desktop Environments as the tools that make up the control center in an Operating System. Want to change the display resolution, theme, colors, fonts, etc. well all that stuff is in the desktop environment. Now you don’t technically need a full blow DE with all this stuff. The main thing you do need is a Window Manager to control where windows are placed. With all that said lets layout the common DEs:
+
+    GNOME
+    KDE
+    XFCE
+    Window Managers
+    and many, many, more. This could be a 100 page manual with all the options, but I want to give you the basics. GNOME gives more of a mac-esque style and KDE gives that windows look and feed. XFCE is more bare-bones with the essential tools and not much else. Where a basic “window manager” is just the window manager without any utilities. You might think… “How the hell do you change the resolution? or font? with a window manger…” This is accomplished either by hard coding it in to the configuration files or by installing an independent utility.
+
+Package Managers
+
+This is how distributions install programs. Here are the major ones you need to know about.
+
+    APT - Debian distros apt install programname
+    DNF / YUM - RHEL distros dnf install programname
+    Pacman - Arch distros pacman -S programname
+
+Distributions
+
+So now that you know what they are 
+made up of we can easily get to 
+deciding what you really want your 
+computing experience to be like. 
+Figure out what components above 
+you like and do NOT like. Then swap 
+them out for something better. The main
+ gripe I have with Windows and Mac is I 
+ find their file manager absolutely terrible.
+  I want to switch them and rip out the junk they give me, but we can’t as they are integral to the function of the operating system. In Linux, we get that freedom. Here are the three “distributions” that pretty much everything is based on and what the base package installs are. Remember you can change the things you do NOT like from the stock settings.
+Debian Linux
+
+debian
+
+Debian uses a stable release cycle and generally has older packages, but they don’t usually have many bugs and are very reliable. This is typically my go to for desktops I don’t change much.
+
+    Bootloader - GRUB
+    Init System - systemd
+    Display Render - Xorg
+    Display Manager - SDDM/GDM
+    Desktop Environment - KDE/GNOME
+    Package Manager - APT
+
+Arch Linux
+
+arch
+
+Very new packages with a massive user repository to grab programs you might be missing and builds them for you. The main issue is if you forget to update your system for a period of months it is prone to breaking. Backups are MANDATORY if you use this for your daily use. The benefits are you get the latest and greatest and is often thought to be the best for drivers and hardware that is just released. Its unique that you get to choose every component and can utilize pretty much any COMBINATION of components listed above. The only constant is its package manager which is PACMAN. The other unique aspect is it has a helper program that can install things through the AUR (Arch User Repository) and boy does it have options here… I’m going to recommend the top three
+
+    paru
+    yay
+    trizen They follow the same syntax as pacman except you run them at a user level and they can install pretty much any package. For a complete list visit: https://aur.archlinux.org/
+
+Fedora Linux
+
+fedora
+
+This is a RHEL (Red Hat Enterprise Linux) based distribution. It strikes a balance between newer packages and Linux kernels between Debian and Arch. Its not as new as Arch, but not as old as Debian. It has different SPINS but its main download uses the following:
+
+    Bootloader - Systemd
+    Init System - systemd
+    Display Render - Wayland
+    Desktop Environment - GNOME
+    Package Manager - DNF
+
+Conclusion
+
+So the best distribution is the one that suits your needs and preferences. Instead of the one size fits all approach of Mac and Windows, Linux takes a completely different approach. Learn the above and try out the different options and you will make the perfect system for your needs. You will also understand why all the top 5 distros and other Linux garbage on the internet is worthless. That is because there is no perfect distro, however there is the perfect distro for YOU! It just so happens that it is different for each user and you have the options that no other system on earth give you with Linux.
+
+
+Boot loader
+Kernel
+User space
+Window manager
+
+
+Package Managers
+(DNF (Dandified Packaging Tool) is a package manager that installs, updates, and removes packages on RPM-based Linux distributions. It is a more advanced version of the YUM manager and intended to be the replacement for YUM in RPM-based systems.)
+-
+1 - DPKG – Debian Package Management System (.deb) - Dpkg is a base package management system for the Debian Linux family, it is used to install, remove, store, and provide information about .deb packages.
+APT - (Advanced Packaging Tool) - It is a very popular, free, powerful, and more so, useful command line package management system that is a front end for the dpkg package management system.
+Aptitude Package Manager - This is also a popular command line front-end package management tool for the Debian Linux family, it works similarly to APT and there have been a lot of comparisons between the two, but above all, testing out both can make you understand which one actually works better.
+Synaptic Package Manager - Synaptic is a GUI package management tool for APT based on GTK+ and it works fine for users who may not want to get their hands dirty on a command line. It implements the same features as the apt-get command line tool.
+-
+2 - RPM - (Red Hat Package Manager) - This is the Linux Standard Base packing format and a base package management system created by RedHat. Being the underlying system, there are several front-end package management tools that you can use with it and but we shall only look at the best and that is:
+YUM (Yellowdog Updater, Modified) - It is an open-source and popular command line package manager that works as an interface for users to RPM. You can compare it to APT under Debian Linux systems, it incorporates the common functionalities that APT has.
+DNF – Dandified Yum - It is also a package manager for RPM-based distributions, introduced in Fedora 18 and it is the next generation of the version of YUM.
+-
+3 - Pacman Package Manager – Arch Linux - It is a popular and powerful yet simple package manager for Arch Linux and some little-known Linux distributions, it provides some of the fundamental functionalities that other common package managers provide including installing, automatic dependency resolution, upgrading, uninstalling, and also downgrading software.
+4 - Zypper Package Manager – openSUSE - It is a command line package manager on OpenSUSE Linux and makes use of the libzypp library, its common functionalities include repository access, package installation, resolution of dependencies issues, and many more.
+5 - Portage Package Manager – Gentoo - It is a package manager for Gentoo, a less popular Linux distribution as of now, but this won’t limit it as one of the best package managers in Linux.
+
+Desktop environments
+-
+1 - GNOME
+Gnome 3 installation: sudo apt-get install gnome-shell
+2 - KDE plasma
+KDE see Kubuntu installation: sudo apt-get install kubuntu-desktop
+3 - Cinnamon
+4 - MATE
+5 - LXDE
+6 - LXQt
+7 - XFCE installation: sudo apt-get install xfce4
+8 - Openbox installation: sudo apt-get install openbox
+
+
+Window System
+-
+X Window System (The X.Org project)
+
+Window managers
+-
+1 - Awesome WM
+2 - i3
+3 - Sway
+4 - 

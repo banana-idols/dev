@@ -1,0 +1,8 @@
+Server setup
+distro name - ubuntu-23.10-live-server-arm64
+paket manager - apt
+
+apt comand - 
+sudo apt update && sudo apt upgrade
+sudo apt install ubuntu-mate-desktop
+sudo apt install firefox

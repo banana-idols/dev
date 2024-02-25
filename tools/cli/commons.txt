@@ -1,0 +1,92 @@
+Common comands in comand line
+
+tab - autocomplit
+clear - clear comand line
+pwd - print work directory
+
+ls - list of a directory
+	ls -al
+
+cd - change directory
+    cd / - to root folder
+    cd ~ - to home folder
+    cd .. - up in the dir tree
+    cd Users/banana-idols/Dropbox/share/manuals/ - directory phass
+
+mv - move or rename file or folder
+    mv /path/to/old_filename /path/to/new_filename
+    sudo mv OldFileName NewFileName
+
+mkdir - make a directory
+    mkdir folderName
+    
+touch - create file
+    touch file-name.txt
+
+cp - copy and rename a file
+    cp /path/to/old_filename /path/to/new_filename
+
+
+2 – "ls" -list files and directorys - lists all files and directories in the working directory.
+
+11 - "ls -a" - display the contents of the working directory in more detail. - lists all contents, including hidden files and directories
+ 
+12 - "ls -l" - lists all contents of a directory in long format
+ 
+13 - "ls -t" -  -order files and directories by the time they were last modified.
+ 
+14 - "ls -alt" - lists all contents, including hidden files and directories, in long format, ordered by the date and time they were last modified.
+ 
+3 – "pwd"  - print working directory - outputs the name of the current working directory.
+ 
+4 - "cd" - change directory - switches you into the directory you specify.
+ 
+5 - "cd .." - shift up
+ 
+5 - "cd ../../" - shift up up
+ 
+6 - "cd /" -  root dir
+ 
+7 - "cd ~" -  home dir
+ 
+8 - "mkdir" - make directory - creates a new directory in the working directory.
+ 
+9 - "touch" - creates a new file inside the working directory - creates a new file inside the working directory.
+ 
+10 - "sudo apt install git" - git instalation
+ 
+15 - "cp" - copies files -command copies files or directories
+ 
+16 - "cp *" - copy all files into the directory.
+ 
+17 - "cp m*.txt" - selects all files in the working directory starting with "m" and ending with ".txt", and copies them to
+ 
+18 - "mv" -  - moves and renames filescommand moves files
+ 
+19 - "mv" - moves and renames files - command rename files
+ 
+20 - "rm" -  removes files - command deletes files and directories
+ 
+21 - "rm -r" - removes directories - stands for "recursive," and it's used to delete a directory and all of its child directories.
+
+Examples:
+
+cp testFyle.txt testFile-copy.txt - to duplicate in courent directory
+
+cp testFile.txt/Some/Folder/
+
+cp -r - recursive method to copy the folder
+
+mv testFyle.txt testFile-renamed.txt - to rename file or folder
+
+mv testFile.txt Some/Folder/
+
+mv -r - recursive method to moving the folder
+
+rm testFyle.txt - removing file or folder
+
+rm-i - interacitively
+
+rm -r -removing recorsive or another words not empty flder
+
+rm-rf - remove recusivly and forcefully

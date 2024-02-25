@@ -1,0 +1,110 @@
+linuxmint-18-cinnamon-64bit
+linuxmint-18-xfce-64bit
+
+lubuntu-16.10-desktop-amd64
+ubuntu-16.04.1-desktop-amd64
+
+
+
+Window manager like Openbox or ausemeVM
+
+
+Need Ubuntu based dictro (familer setap process deb pakege system)
+
+Gnome 3 (gnome-shell)
+
+openbox (window mamager)
+
+2 - look comand for file manager (lubuntu - pcmanfm) - lxtack(task manager) - gnome-disks(disks monitor)
+
+Mint (same as ubuntu but suport AMD)
+
+Elementary OS (modern design)
+
+Solus (modern design)
+
+
+bodhi - (slall sise)
+
+
+
+pcmanfm - (start file manager from terminal)
+
+
+
+How to Linux destributive
+
+https://habrahabr.ru/post/126427/
+
+https://susestudio.com
+
+
+gnome-shell (gdm and lightgdm (lightgdm more modarn))
+
+sudo -s
+
+apt install gnome-shell
+
+--------------------------------
+
+Cinnamon
+
+sudo -s
+
+//not work
+sudo add-apt-repository ppa:embrosyn/cinnamon
+sudo apt update
+sudo apt install cinnamon blueberry
+
+
+//not work
+add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-nightly
+apt update
+apt install cinnamon
+apt upgrade
+
+
+---------------------------------------
+
+
+XFCE - xubuntu
+
+apt install xubuntu-desktop
+
+-------------------------------------------
+
+LXDE - lubuntu
+
+apt install lubuntu-desktop
+
+---------------------------------------------------------
+
+openbox - also will be installed - to exit type openbox --exit
+
+apt install openbox
+
+https://www.maketecheasier.com/configure-andcustomize-openbox/ - menu
+
+sudo apt-get install menu
+cp /var/lib/openbox/debian-menu.xml ~/.config/openbox/debian-menu.xml
+cp /etc/xdg/openbox/menu.xml ~/.config/openbox/menu.xml
+cp /etc/xdg/openbox/rc.xml ~/.config/openbox/rc.xml
+openbox --reconfigure
+
+
+Note: In Ubuntu, the configuration files are installed to the /etc/X11 folder instead of /etc/xdg, so you should use the following commands instead:
+
+cp /etc/X11/openbox/menu.xml ~/.config/openbox/menu.xml
+cp /etc/X11/openbox/rc.xml ~/.config/openbox/rc.xml
+
+What we have done above is
+
+Install the debian menu. This will automatically arranged your existing, as well as newly installed applications into an ordered list.
+copy the configuration files from the system to your own personal folder so your settings won’t get overridden in the next update.
+
+--------------------------------------------
+
+e17
+
+apt install e17
+

@@ -1,0 +1,10 @@
+fonts helper for linux
+
+https://github.com/tryvin/figma-linux-font-helper
+
+https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
+
+https://github.com/Figma-Linux/figma-linux-font-helper
+
+
+

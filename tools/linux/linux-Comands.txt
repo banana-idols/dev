@@ -1,0 +1,17 @@
+Update and Upgrate system
+-
+sudo apt-get update && sudo apt-get upgrade -y
+
+Reboot
+-
+sudo reboot
+
+Tasksel - GUI manager
+-
+sudo apt update
+sudo apt install tasksel
+sudo tasksel –list-tasks
+
+sudo tasksel install ubuntu-desktop
+sudo systemctl set-default graphical.target
+

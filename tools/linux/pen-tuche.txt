@@ -1,0 +1,5 @@
+tuch-pad
+
+xsetwacom --list devices
+
+xsetwacom set "13" touch off
