@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/playground/old-python/playground/gitTesting/pythonAppTest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/playground/old-python/playground/python_realtime_chat/frontend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools/python" vcs="Git" />
   </component>
 </project>
